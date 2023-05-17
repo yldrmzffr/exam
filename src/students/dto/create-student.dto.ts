@@ -1,4 +1,4 @@
-import { IsDate, IsEmail, IsString } from 'class-validator';
+import { IsDateString, IsEmail, IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateStudentDto {
@@ -18,7 +18,7 @@ export class CreateStudentDto {
   })
   name: string;
 
-  @IsDate()
+  @IsDateString()
   @ApiProperty({
     description: 'Student Birthdate',
     required: true,
